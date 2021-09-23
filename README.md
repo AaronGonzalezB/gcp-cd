@@ -53,4 +53,34 @@ Test with the URL provided by the deploy and thats all!
  
  If everything is ok until now, you have builded a CI/CD Hello World app!
  
- ## 2. 
+ ## 2. Infrastructure as Code (IaS) with Terraform
+ 
+ To setting up a VM with Terraform, in the Cloud Shell:
+ 
+ * Create a terraform instance - `touch instance.tf` with these example settings:
+
+```
+resource "google_compute_instance" "default" {
+    project      = "ias-project-326902"
+    name         = "terraform"
+    machine_type = "n1-standard-1"
+    zone         = "us-central1-a"
+
+    boot_disk {
+        initialize_params {
+            image = "debian-cloud/debian-9"
+        }
+    }
+
+    network_interface {
+        network = "default"
+        access_config {
+
+        }
+    }
+}
+```
+* Initialize the Terraform instance - `terraform init`.
+* You have to enable the Compute Engine API to apply the instance.
+* Apply the instance - `terraform apply` and `yes` to changes. 
+
