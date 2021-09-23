@@ -1,5 +1,6 @@
 # gcp-cd
-Demo of Continuous Delivery with GCP
+
+## 1. Demo of Continuous Delivery with GCP
 
 1. Create a new in GCP - gcp-cd
 2. Open the console, verify that the gcp-cd is connected to the Terminal
@@ -51,3 +52,5 @@ Dont forget your credentials if it was the first time:
 Test with the URL provided by the deploy and thats all!
  
  If everything is ok until now, you have builded a CI/CD Hello World app!
+ 
+ ## 2. 
